@@ -61,10 +61,10 @@ function createPostElement(post) {
 	'</div>' + '</div>';
 	return elem;
 }
-
+hideSplashScreen();
 
 function addPost(commentElem) {
-	document.getElementById('posts-cont').append(commentElem);
+	document.getElementById('posts-container').append(commentElem);
 }
 
 
@@ -132,7 +132,11 @@ const post = new Post(1, user.id, "image.img", "news/news", 0, "11.11.1111");
 const user2 = new User(2, "gena@gena.com", false);
 authorize(user2);
 
-const comment = new Comment(user2.id, post.id, "long text", "23.01.2019");
+
+const comment = new Comment(user2.name, post.id, "shadow", "11.11.1111");
+let cont = createPostElement(post);
+addPost(cont);
+document.getElementById('comments').append(createCommentElement(comment));
 
 console.log(user);
 console.log(post);
