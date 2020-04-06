@@ -55,8 +55,8 @@ function createPostElement(post) {
 	'<hr>' +
 	'<div id="comments">' +
 	'<div class="py-2 pl-3">' +
-				  '<a href="#" class="muted">' + 'someusername' + '</a>' +
-				  '<p>' + 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad est cumque nulla voluptatem enim voluptas minima illum quis! Voluptatibus dolorem minus tempore aliquid corrupti nesciunt, obcaecati fuga natus officiis.' + '</p>' +
+				  '<a href="#" class="muted">' + 'Kural:' + '</a>' +
+				  '<p>' + 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' + '</p>' +
 				'</div>' +
 	'</div>' + '</div>';
 	return elem;
@@ -127,13 +127,13 @@ const user = new User(1, "Vasya", "vas@vas.com", false);
 authorize(user);
 
 
-const post = new Post(1, user.id, "image.img", "news/news", 0, "11.11.1111");
+const post = new Post(1, user.id, "https://www.meme-arsenal.com/memes/753f0b3407ee91d34463cf8808f3904e.jpg", "", 0, "11.11.1111");
 
-const user2 = new User(2, "gena@gena.com", false);
+const user2 = new User(2, "helpme@please.com", false);
 authorize(user2);
 
 
-const comment = new Comment(user2.name, post.id, "shadow", "11.11.1111");
+const comment = new Comment(user2.name, post.id, "xD", "11.11.1111");
 let cont = createPostElement(post);
 addPost(cont);
 document.getElementById('comments').append(createCommentElement(comment));
