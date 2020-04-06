@@ -63,6 +63,11 @@ function createPostElement(post) {
 }
 
 
+function addPost(commentElem) {
+	document.getElementById('posts-cont').append(commentElem);
+}
+
+
 class User {
 	constructor(id, name, email, isAuthorised) {
 		this.id = id,
