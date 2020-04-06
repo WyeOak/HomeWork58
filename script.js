@@ -11,7 +11,14 @@ function showSplashScreen() {
 	document.body.classList.add('no-scroll');
 }
 
-
+function createCommentElement(comment) {
+	let elem = document.createElement('div');
+	elem.classList.add('py-2');
+	elem.classList.add('pl-3');
+	elem.innerHTML = '<a href="#" class="muted">'  + comment.comentator + '</a>' + 
+	'<p>' + comment.comment + '</p>';
+	return elem;
+}
 
 
 
